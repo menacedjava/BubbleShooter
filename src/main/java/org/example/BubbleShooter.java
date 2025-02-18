@@ -32,23 +32,23 @@ public class BubbleShooter extends JPanel implements ActionListener, KeyListener
         addKeyListener(this);
     }
 
-//    private void addBubbles() {
-//        Random rand = new Random();
-//        for (int i = 0; i < 10; i++) {
-//            bubbles.add(new Bubble(rand.nextInt(750), rand.nextInt(300), 30));
-//        }
-//    }
+    private void addBubbles() {
+        Random rand = new Random();
+        for (int i = 0; i < 10; i++) {
+            bubbles.add(new Bubble(rand.nextInt(750), rand.nextInt(300), 30));
+        }
+    }
 
-//    @Override
-//    public void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//        player.draw(g);
-//        for (Bubble b : bubbles) {
-//            b.draw(g);
-//        }
-//        if (shooting) {
-//            bullet.draw(g);
-//        }
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        player.draw(g);
+        for (Bubble b : bubbles) {
+            b.draw(g);
+        }
+        if (shooting) {
+            bullet.draw(g);
+        }
 //@Override
 //public void actionPerformed(ActionEvent e) {
 //    if (shooting) {
