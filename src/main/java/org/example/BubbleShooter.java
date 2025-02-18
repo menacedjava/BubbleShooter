@@ -49,42 +49,44 @@ public class BubbleShooter extends JPanel implements ActionListener, KeyListener
         if (shooting) {
             bullet.draw(g);
         }
-//@Override
-//public void actionPerformed(ActionEvent e) {
-//    if (shooting) {
-//        bullet.move();
-//        if (bullet.y < 0) {
-//            shooting = false;
-//        }
-//    }
-//
-//    Iterator<Bubble> iterator = bubbles.iterator();
-//    while (iterator.hasNext()) {
-//        Bubble b = iterator.next();
-//        if (shooting && b.contains(bullet.x, bullet.y)) {
-//            iterator.remove();
-//            shooting = false;
-//        }
-//    }
-//
-//    repaint();
-//}
+    }
 
-//    @Override
-//    public void keyPressed(KeyEvent e) {
-//        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-//            player.move(-10);
-//        }
-//        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-//            player.move(10);
-//        }
-//        if (e.getKeyCode() == KeyEvent.VK_SPACE && !shooting) {
-//            shooting = true;
-//            bullet = new Bullet(player.x + 10, player.y - 10);
-//        }
-//    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (shooting) {
+            bullet.move();
+            if (bullet.y < 0) {
+                shooting = false;
+            }
+        }
 
-//    }
+        Iterator<Bubble> iterator = bubbles.iterator();
+        while (iterator.hasNext()) {
+            Bubble b = iterator.next();
+            if (shooting && b.contains(bullet.x, bullet.y)) {
+                iterator.remove();
+                shooting = false;
+            }
+        }
+
+        repaint();
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            player.move(-10);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            player.move(10);
+        }
+        if (e.getKeyCode() == KeyEvent.VK_SPACE && !shooting) {
+            shooting = true;
+            bullet = new Bullet(player.x + 10, player.y - 10);
+        }
+    }
+
+    }
 
 //    @Override
 //    public void keyReleased(KeyEvent e) {
