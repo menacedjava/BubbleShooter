@@ -11,26 +11,26 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class BubbleShooter extends JPanel implements ActionListener, KeyListener {
-//    private Timer timer;
-//    private ArrayList<Bubble> bubbles;
-//    private Player player;
-//    private boolean shooting = false;
-//    private Bullet bullet;
+    private Timer timer;
+    private ArrayList<Bubble> bubbles;
+    private Player player;
+    private boolean shooting = false;
+    private Bullet bullet;
 
-//    public BubbleShooter() {
-//        setPreferredSize(new Dimension(800, 600));
-//        setBackground(Color.BLACK);
-//        bubbles = new ArrayList<>();
-//        player = new Player(400, 550);
-//        bullet = new Bullet(player.x + 10, player.y - 10);
-//
-//        addBubbles();
-//        timer = new Timer(10, this);
-//        timer.start();
-//
-//        setFocusable(true);
-//        addKeyListener(this);
-//    }
+    public BubbleShooter() {
+        setPreferredSize(new Dimension(800, 600));
+        setBackground(Color.BLACK);
+        bubbles = new ArrayList<>();
+        player = new Player(400, 550);
+        bullet = new Bullet(player.x + 10, player.y - 10);
+
+        addBubbles();
+        timer = new Timer(10, this);
+        timer.start();
+
+        setFocusable(true);
+        addKeyListener(this);
+    }
 
 //    private void addBubbles() {
 //        Random rand = new Random();
